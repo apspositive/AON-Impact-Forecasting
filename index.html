@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Impact Forecasting Task</title>
+        <meta name="description" content="Effect of stochastic/probabilistic loss calculation - simulation of losses caused by a tsunami flooding a tree house by 2m water depth.">
+        <meta name="author" content="ArsenyS">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/scripts.js"></script>
+    </head>
+
+    <body onload = "init()">
+        <div class = "float">   
+            <form id = "values">
+                <label>Mean:</label> <input type="text" id = "mean" value = "55%" /> 
+                <small>* You can use float numbers like 0.1 same as % values  like 10%</small>
+                <br />
+                <label>Deviation:</label> <input type="text" id = "deviation" value = "20%" />            
+                <br />
+                <label>Number of simulations:</label> <input type="text" id = "simulations_count" value = "1000" />
+                <br />            
+                <label>InsuredValue:</label> <input type="text" id = "insured_value" value = "100000" />AUD
+                <br />
+                <label>Tsunami flood limit:</label> <input type="text" id = "tfl" value = "15000" />AUD
+                <br />
+                <button id = "run" type="button" onmouseup="runSimulation()">Run simulations</button>
+            </form>
+
+            <canvas id = "graph"></canvas>
+            <label class = "red">GFU loss</label>
+            <label class = "blue">GR loss</label>
+        </div>
+        <div class = "float">   
+ 
+            <div id = "results">No results</div>
+            <button id ="generate_csv" onclick="generateCSV()"> Download CSV </button>  
+        </div>
+    </body>
+</html>
