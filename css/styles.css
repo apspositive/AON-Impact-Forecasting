@@ -1,0 +1,87 @@
+body html {
+    box-sizing: border-box;
+    background-color: beige;
+    font-size: 1em;
+    line-height: 3rem;
+}
+
+label {
+    color: #403532;
+}
+
+input {
+    width: 48px;
+    border:0;
+    background-color: #c0b9b0;
+    padding:4px;
+    margin: 10px;
+}
+
+button {
+    width: 120px;
+    border:0;
+    background-color: #403532;
+    color: white;
+    padding: 4px;
+    margin: 10px 0;  
+    cursor: auto;
+}
+
+#graph {
+    width: 480px;
+    height: 360px;
+}
+
+label.red{
+    color: rgba(200, 0, 0, 0.75);
+    display: list-item;
+    float: none;
+}
+
+label.blue{
+    color: rgba(0, 200, 180, 0.75);
+    display: list-item;
+    float: left;
+}
+
+#results {
+    min-width: 380px;
+
+    max-height: 570px;
+    overflow-y: auto;
+}
+
+table {
+    min-width: 360px;
+}
+
+td, th {
+    text-align: right;
+    border: 0;
+    padding: 4px;
+}
+
+th{
+    background-color: #999;
+    color:white;
+}
+
+.odd {
+    background-color: #ccc;
+}
+
+#generate_csv {
+    display: none;
+}
+
+.float{
+    padding: 24px;
+    display: table-cell;
+
+}
+
+@media only screen and (max-width: 1000px){  
+    .float{ 
+        display: block;
+    }
+}
