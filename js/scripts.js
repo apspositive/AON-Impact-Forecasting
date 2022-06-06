@@ -30,7 +30,7 @@ var normalDistribution = (x) =>  Math.E ** (-(x - mean) * (x - mean) * denominat
 var normalDistributionNormalized = (x) => normalDistribution(x) / max;
 
 // calculates the mean value from results array on given field
-var calculateMean = (field) => results.reduce((a, b) => !a ? a + parseFloat(b[field]): (a + parseFloat(b[field])) / 2, 0).toFixed(2);
+var calculateMean = (field) => results.reduce((a, b) => !!a ? (a + parseFloat(b[field])) / 2 : parseFloat(b[field]), 0).toFixed(2);
 
 
 //Graphics section_______________________________________________________________________________________
@@ -130,6 +130,7 @@ var getValues = () => {
     initCalc();
 }
 
+// Main simulation function: taking the random value and checking it probability from the distribution graph
 var fillResults = (resolve) => {
     while (results.length < simulationsCount) {
         var loss = Math.random();
